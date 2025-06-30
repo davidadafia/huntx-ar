@@ -1,9 +1,12 @@
-<h1>Treasure Hunt Clues</h1>
+<h1>All Clues</h1>
+<%= link_to 'New Clue', new_huntx_path %>
 
 <ul>
   <% @huntxes.each do |huntx| %>
     <li>
-      <a href="<%= huntx_path(huntx) %>">Clue <%= huntx.id %></a>
+      <%= link_to huntx.title, huntx_path(huntx) %> |
+      <%= link_to 'Edit', edit_huntx_path(huntx) %> |
+      <%= link_to 'Delete', huntx_path(huntx), method: :delete, data: { confirm: 'Are you sure?' } %>
     </li>
   <% end %>
 </ul>
