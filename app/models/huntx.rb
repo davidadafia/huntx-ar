@@ -1,0 +1,2 @@
+class Huntx < ApplicationRecord
+end

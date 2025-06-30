@@ -1,0 +1,9 @@
+<h1>Treasure Hunt Clues</h1>
+
+<ul>
+  <% @huntxes.each do |huntx| %>
+    <li>
+      <a href="<%= huntx_path(huntx) %>">Clue <%= huntx.id %></a>
+    </li>
+  <% end %>
+</ul>
